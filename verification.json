@@ -1,0 +1,39 @@
+{
+  "adversarial_cli_and_read_only_cases_in_tests": 22,
+  "all_expected_outcomes_verified": true,
+  "commands": [
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py examples/pass.toml --overlay examples/overlay.toml --mode deep",
+      "expected_exit": 0,
+      "output_sha256": "f2f076be0769b28756b7e2cab27ee2c6662b34afbbdd20adca0b1237b34d5388",
+      "status": "pass"
+    },
+    {
+      "actual_exit": 1,
+      "command": "python3 tool.py examples/fail.toml --overlay examples/overlay.toml --mode deep",
+      "expected_exit": 1,
+      "output_sha256": "9f7fd171e6cc1708d75d36f8f302f037f5596e765fabbc2c86ee6f296cffba51",
+      "status": "fail"
+    },
+    {
+      "actual_exit": 2,
+      "command": "python3 tool.py examples/malformed.toml --overlay examples/overlay.toml --mode deep",
+      "expected_exit": 2,
+      "output_sha256": "4173ccf53679adc5bc3af207a6bfc16fd4fa8436f7619e78f7970c2d623e45fb",
+      "status": "error"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py --help",
+      "expected_exit": 0
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 -m unittest -v test_tool.py",
+      "expected_exit": 0,
+      "test_count": 23
+    }
+  ],
+  "runtime": "3.12.14"
+}

@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "slug": "toml-overlay-diff",
+  "domain": "data",
+  "guidance_group": "medium",
+  "source_commit": "1286096c10a23bbb04aca83679ae3c31f3326030",
+  "source_repository": "mytestapp20261001-collab/mytest-engineering-toolbox",
+  "source_repository_id": 1411411288,
+  "source_path": "tools/toml-overlay-diff",
+  "root_path": ".",
+  "publication_status": "prepared_only; coordinator verifies final repository identity and remote CI",
+  "expected_repository": "mytestapp20261001-collab/toml-overlay-diff",
+  "repository_id": null,
+  "preserved_files": [
+    {
+      "path": "README.md",
+      "size_bytes": 5147,
+      "sha256": "8388247f33b52dfe54e9523f807388b37b920e6516c8cdf0253014855b632faf",
+      "git_blob_sha1": "f04ea78621d4335dd8f729b8b76acb128d9f8597",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "size_bytes": 4187,
+      "sha256": "62efeb1774e1e0eb134780d1af5f2af06658d0b8541fd47de306b24153ebdfc5",
+      "git_blob_sha1": "318ce35a134b5b50cf936565bea073683d7701cf",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/SKILL.md"
+    },
+    {
+      "path": "examples/fail.toml",
+      "size_bytes": 41,
+      "sha256": "1a3ae1e85e2c250c3d873ae3be18063b133ee251d70a2a21486efe7f1259d1a8",
+      "git_blob_sha1": "42cd938371a87bea53d6649d8ea8e9e55247541d",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/examples/fail.toml"
+    },
+    {
+      "path": "examples/malformed.toml",
+      "size_bytes": 8,
+      "sha256": "427fa03933ac4749e630e260f3ae6aa5abe181e6b3036cf97bfb3e2ee95bf3a2",
+      "git_blob_sha1": "ee2d844bda3dfafa5f8074812b4d6ac509732370",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/examples/malformed.toml"
+    },
+    {
+      "path": "examples/overlay.toml",
+      "size_bytes": 22,
+      "sha256": "63e1735e02d3a7f5a1d085348503c6d42b9dc20555399f46ca6852dc2c8aea0a",
+      "git_blob_sha1": "eadafd9c975ad69b21e636c4efd5640df066ef05",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/examples/overlay.toml"
+    },
+    {
+      "path": "examples/pass.toml",
+      "size_bytes": 41,
+      "sha256": "d2aed81a9a1f24ecfc91e8d71b7dfb6dee3a5b0220ffa349089ea2125a111337",
+      "git_blob_sha1": "f313d71d469c597b63b06d46ff401645fed81f35",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/examples/pass.toml"
+    },
+    {
+      "path": "test_tool.py",
+      "size_bytes": 6511,
+      "sha256": "b5c5b092e6d4ba62f66ff5aeea92e5f5d9530aad66b66351c5d57429afaf6132",
+      "git_blob_sha1": "5eed4ee64033679a72c00835dce89be81e4b55b6",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/test_tool.py"
+    },
+    {
+      "path": "tool.py",
+      "size_bytes": 6581,
+      "sha256": "fa431755e1e621f3b8638288ee954eacaaac5c75d03495442ca2636d08d7a0ad",
+      "git_blob_sha1": "0a08d8ea860cbe4c6463c36a8d7ffce5b8521c91",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/tool.py"
+    },
+    {
+      "path": "verification.json",
+      "size_bytes": 1224,
+      "sha256": "0705ef194a4b23d177a0e0d90692df1670c0eaffc931b646f35196585f670512",
+      "git_blob_sha1": "47ba7a8d8803ea0978469e26a2032a40ab945760",
+      "utf8": true,
+      "source_path": "tools/toml-overlay-diff/verification.json"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1076,
+      "sha256": "dce76471613629e93f3f98b7aaa6f72ff9adb88204a3f83d3045952017ab2f46",
+      "git_blob_sha1": "677c4463d59b560db9c1fde1052eff6eefa6441a",
+      "utf8": true,
+      "source_path": "LICENSE"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 62,
+      "sha256": "e4d5aecc4cd36f593c2e7f3dad08b24261b13466b898004a445614058d29d8de",
+      "git_blob_sha1": "fe9f8fb619601213cbfef4f6eadb5d413d8f7f01",
+      "utf8": true,
+      "source_path": ".gitignore"
+    }
+  ],
+  "readme_checks": [
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/pass.toml",
+        "--overlay",
+        "examples/overlay.toml",
+        "--mode",
+        "deep"
+      ],
+      "expected_exit": 0,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/pass.toml --overlay examples/overlay.toml --mode deep"
+    },
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/fail.toml",
+        "--overlay",
+        "examples/overlay.toml",
+        "--mode",
+        "deep"
+      ],
+      "expected_exit": 1,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/fail.toml --overlay examples/overlay.toml --mode deep"
+    },
+    {
+      "label": "README example",
+      "args": [
+        "tool.py",
+        "examples/malformed.toml",
+        "--overlay",
+        "examples/overlay.toml",
+        "--mode",
+        "deep"
+      ],
+      "expected_exit": 2,
+      "output": "json",
+      "documented_command": "python3 tool.py examples/malformed.toml --overlay examples/overlay.toml --mode deep"
+    },
+    {
+      "label": "CLI help",
+      "args": [
+        "tool.py",
+        "--help"
+      ],
+      "expected_exit": 0,
+      "output": "help"
+    },
+    {
+      "label": "CLI missing input",
+      "args": [
+        "tool.py"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    },
+    {
+      "label": "CLI unknown argument",
+      "args": [
+        "tool.py",
+        "--unsupported-migration-test"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    }
+  ]
+}
